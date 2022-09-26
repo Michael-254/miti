@@ -118,7 +118,7 @@
                                                             <option value="">-- Select Plan --</option>
                                                             @foreach($userSubscriptions as $sub)
                                                             <option value="{{$sub->id}}">{{$sub->type}}
-                                                                {{$sub->quantity}} Copies
+                                                                {{$sub->quantity}} Copies ({{ $sub->quantity - $sub->teams_count - 1 }}) Remaining
                                                             </option>
                                                             @endforeach
                                                         </select>

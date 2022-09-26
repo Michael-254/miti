@@ -60,4 +60,8 @@ class Subscription extends Model
 
         return $quantities;
     }
+
+    public function teams(){
+        return $this->hasMany(Team::class,'subscription_id');
+    }
 }

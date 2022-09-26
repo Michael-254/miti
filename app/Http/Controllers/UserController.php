@@ -77,8 +77,8 @@ class UserController extends Controller
 
     public function invite()
     {
-        $members = Team::with('members', 'subscriptionSize')->where('user_id', auth()->id())->latest()->paginate(8);
-        $userSubscriptions = Subscription::where([['user_id', auth()->id()], ['status', '=', 'paid']])->get();
+        $members = Team::with('members', 'subscriptionSize')->where('user_id', auth()->id())->orderBy('created_at', 'DESC')->paginate(8);
+        $userSubscriptions = Subscription::withCount('teams')->where([['user_id', auth()->id()], ['status', '=', 'paid']])->get();
         return view('users.invite', compact('members', 'userSubscriptions'));
     }
 

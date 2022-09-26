@@ -56,7 +56,7 @@
                                                         <tbody>
                                                             @foreach($members as $member)
                                                             <tr>
-                                                                <td>{{$member->members->created_at->format('d-m-Y')}}</td>
+                                                                <td>{{$member->created_at->format('d-m-Y')}}</td>
                                                                 <td>{{$member->members->name}}</td>
                                                                 <td>{{$member->members->email}}</td>
                                                                 <td>{{$member->subscriptionSize->type}}

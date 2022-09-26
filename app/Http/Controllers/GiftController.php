@@ -19,7 +19,7 @@ class GiftController extends Controller
     public function gifts()
     {
         $members = Gift::with('members', 'subscriptionSize')->where('user_id', auth()->id())->latest()->paginate(8);
-        $subscriptions = SubscriptionPlan::all();
+        $subscriptions = SubscriptionPlan::orderBy('location','ASC')->get();
         $issues = Magazine::latest()->limit(4)->get();
         return view('admin.gift', compact('members', 'subscriptions', 'issues'));
     }

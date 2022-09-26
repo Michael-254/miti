@@ -9,21 +9,22 @@
     <p>{{ $intro }}</p>
 
     <div>
-        <p>Thank you for your order!</p>
-        <p>Miti Magazine Team has invited you to an Miti Magazine Subscription</p>
+        <p>Thank you for your subscriptions to Miti Magazine, the tree farmers magazine for Africa!</p>
+        <p>Kindly find hereunder the link to your account.</p>
         <p>@if($password != '')
             An account has been set-up for you with password: {{$password}}
             Your password i
         @endif
         </p>
 
-        <p>if you wish to invite your team and share your subscription,</p>
+        <p>From there, you will be able to invite members of your choice:,</p>
 
            <p><a href="https://miti-magazine.betterglobeforestry.com">Log on to your account</a> &#x3e; Manage Account &#x3e; Invite Others &#x2192; Invite Member</p>
 
            <p> Add their Name, Email, select the plan you wish to invite them and click send Invite.</p>
+           <p>They will receive an e-mail with the link to their digital subscription.</p>
 
-        <p>If you have questions, Please reply to this email.</p>
+        <p>If you have questions, please forward to Miti-magazine@betterglobeforestry.com or call 0719619006.</p>
         <small class="text-sm">
             Thanks,<br>
             Enjoy!<br>

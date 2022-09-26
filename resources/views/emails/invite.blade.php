@@ -1,24 +1,23 @@
 @component('mail::message')
-# Hi {{$invite->name}}
+# Dear {{$invite->name}}
 
-Congratulations.
-
-{{$customer->name}} has invited you to share their Miti magazines copies
+You have been given a subscription to Miti Magazine online by {{$customer->name}} from {{$customer->company}}
 
 @if($password != '')
 An account has been set-up for you
 Your password is <h4>{{$password}}<h4>.
 @endif
 
+To get access to your magazines kindly click hereunder
+
 @component('mail::button', ['url' => route('user.subscriptions')])
  Get started
 @endcomponent
 
-If you have questions, Please reply to this email.
+Welcome to the Miti Magazine online subscribers.
 
 <small class="text-sm">
-Thanks,<br>
-Enjoy!<br>
+Enjoy the reading!<br>
 Miti Magazine Team<br>
 Better Globe Forestry LTD. 
 </small>
